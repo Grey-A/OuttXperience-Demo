@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
 from app.common.dependencies import get_db
-from app.example_module.apis import router as example_router
+from app.book.apis import router as book_router
 
 
 # Lifespan (startup, shutdown)
@@ -62,4 +62,4 @@ async def health_check(_=Depends(get_db)):
 
 
 # Routers
-app.include_router(example_router, prefix="/example", tags=["Example Docs"])
+app.include_router(book_router, prefix="/books", tags=["books"])
