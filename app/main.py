@@ -28,11 +28,11 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(
-    title="Heavyweight(FastAPI)",
+    title="OuttXperience Demo API",
     docs_url="/",
-    swagger_ui_parameters={
-        "defaultModelsExpandDepth": -1
-    },  # Hides Schemas Menu in Docs
+    # swagger_ui_parameters={
+    #     "defaultModelsExpandDepth": -1
+    # },  # Hides Schemas Menu in Docs
     lifespan=lifespan,
     default_response_class=ORJSONResponse,
 )
