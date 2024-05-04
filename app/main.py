@@ -62,4 +62,4 @@ async def health_check(_=Depends(get_db)):
 
 
 # Routers
-app.include_router(book_router, prefix="/books", tags=["books"])
+app.include_router(book_router, prefix="/books", tags=["Book APIs"])
